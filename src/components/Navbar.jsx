@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 function Navbar() {
   return (
     <section id="navBar">
@@ -7,9 +7,9 @@ function Navbar() {
       <p id="pageSubTitle">Adventure Chronicler</p>
       <hr/>
       <div id='navLinks'> 
-        <NavLink to='/' className="spread">Home</NavLink>
-        <NavLink to='/character' className="spread"> Existing Characters</NavLink>
-        <NavLink to='/character/generator' className="spread">New Character</NavLink>
+        <Link to='/' className="spread">Home</Link>
+        <Link to='/character' className="spread"> Existing Characters</Link>
+        <Link to='/character/generator' className="spread">New Character</Link>
       </div>
     </section>
   )
