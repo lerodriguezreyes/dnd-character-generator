@@ -1,7 +1,20 @@
+import { useContext, useState } from "react"
+import CharacterCard from "../components/CharacterCard"
+import { GeneratorContext } from "../context/generator.context"
+
 
 function CharacterList() {
+
+const {characters, setCharacters} = useContext(GeneratorContext)
+
   return (
-    <div>CharacterList</div>
+    <div>
+    <h3>Character List</h3>
+    {characters.map((character) => {
+
+      return <CharacterCard key={ character.id } character={ character } />
+    })}
+    </div>
   )
 }
 
