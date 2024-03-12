@@ -1,7 +1,5 @@
 import { useState } from "react"
 import { diceRoll } from "../utils/randomizer"
-import { BACKEND_URL } from "../utils/BACKEND_API";
-import { GeneratorContext } from "../context/generator.context";
 
 
 function CharacterGenerator() {
@@ -44,26 +42,6 @@ function CharacterGenerator() {
   const [chaScore, setChaScore] = useState(10);
   const handleChaScore = (e) => setChaScore(e.target.value)
 
-  //ability score dice rolls
-  const strRoll1 = diceRoll(6)
-  const strRoll2 = diceRoll(6)
-  const strRoll3 = diceRoll(6)
-  const conRoll1 = diceRoll(6)
-  const conRoll2 = diceRoll(6)
-  const conRoll3 = diceRoll(6)
-  const dexRoll1 = diceRoll(6)
-  const dexRoll2 = diceRoll(6)
-  const dexRoll3 = diceRoll(6)
-  const intRoll1 = diceRoll(6)
-  const intRoll2 = diceRoll(6)
-  const intRoll3 = diceRoll(6)
-  const wisRoll1 = diceRoll(6)
-  const wisRoll2 = diceRoll(6)
-  const wisRoll3 = diceRoll(6)
-  const chaRoll1 = diceRoll(6)
-  const chaRoll2 = diceRoll(6)
-  const chaRoll3 = diceRoll(6)
-
   // physical description
   const [hairColor, setHairColor] = useState("");
   const handleHairColor = (e) => setHairColor(e.target.value)
@@ -79,9 +57,6 @@ function CharacterGenerator() {
 
   const [bodyType, setBodyType] = useState("");
   const handleBodyType = (e) => setBodyType(e.target.value)
-
-  const [prompt, setPrompt] = useState('')
-  const handlePrompt = setPrompt(`Photorealistic portrait of a ${setSkinColor}-skinned $(setSex) ${setJob} dungeons and dragons character that has ${setEyeColor} eyes, ${setHairColor} colored hair styled as ${setHairStlye}, wearing ${armor} and wielding ${setWeapon}.`)
 
   // personality and background traits
   const [background, setBackground] = useState("")
@@ -148,7 +123,7 @@ function CharacterGenerator() {
   const [celestial, setCelestial] = useState(false)
   const handleCelestial = (e) => setCelestial(true)
 
-  const [draconinc, setDraconic] = useState(false)
+  const [draconic, setDraconic] = useState(false)
   const handleDraconic = (e) => setDraconic(true)
 
   const [deepSpeech, setDeepSpeech] = useState(false)
@@ -167,127 +142,173 @@ function CharacterGenerator() {
   const handleUndercommon = (e) => setUndercommon(true)
 
   const [artisanTools, setArtisanTools] = useState(false)
+  const handleArtisanTools = (e) => setArtisanTools(true)
 
   const [alchemistSupplies, setAlchemistSupplies] = useState(false)
-
-  const [brewerSupplie, setBrewerSupplie] = useState(false)
+  const handleAlchemistSupplies = (e) => setAlchemistSupplies(true)
+ 
+  const [brewerSupplies, setBrewerSupplies] = useState(false)
+  const handleBrewerSupplies = (e) => setBrewerSupplies(true)
 
   const [calligrapherSupplies, setCalligrapherSupplies] = useState(false)
-
+  const handleCalligrapherSupplies = (e) => setCalligrapherSupplies(true)
+  
   const [carpenterTools, setCarpenterTools] = useState(false)
+  const handleCarpenterTools = (e) => setCarpenterTools(true)
 
   const [cartographerTools, setCartographerTools] = useState(false)
+  const handleCartographerTools = (e) => setCartographerTools(true)
 
   const [cobblerTools, setCobblerTools] = useState(false)
+  const handleCobblerTools = (e) => setCobblerTools(true)
 
   const [cookTools, setCookTools] = useState(false)
-
+  const handleCookTools = (e) => setCookTools(true)
   const [glassblowerTools, setGlassblowerTools] = useState(false)
+  const handleGlassblowerTools = (e) => setGlassblowerTools(true)
 
   const [jewellerTools, setJewellerTools] = useState(false)
+  const handleJewellerTools = (e) => setJewellerTools(true)
 
   const [leatherworkerTools, setLeatherworkerTools] = useState(false)
+  const handleLeatherWorkerTools = (e) => setLeatherworkerTools(true)
 
   const [masonTools, setMasonTools] = useState(false)
+  const handleMasonTools = (e) => setMasonTools(true)
 
   const [painterSupplies, setPainterSupplies] = useState(false)
+  const handlePainterSupplies = (e) => setPainterSupplies(true)
 
   const [potterTools, setPotterTools] = useState(false)
+  const handlePotterTools = (e) => setPotterTools(true)
 
   const [smithTools, setSmithTools] = useState(false)
+  const handleSmithTools = (e) => setSmithTools(true)
 
   const [tinkerTools, setTinkerTools] = useState(false)
+  const handleTinkerTools = (e) => setTinkerTools(true)
 
   const [weaverTools, setWeaverTools] = useState(false)
+  const handleWeaverTools = (e) => setWeaverTools(true)
 
   const [woodcarverTools, setWoodcarverTools] = useState(false)
+  const handleWoodcarverTools = (e) => setWoodcarverTools(true)
 
   const [disguiseKit, setDisguiseKit] = useState(false)
+  const handleDisguiseKit = (e) => setDisguiseKit(true)
 
   const [forgeryKit, setForgeryKit] = useState(false)
+  const handleForgeryKit = (e) => setForgeryKit(true)
 
-  const [gamingSets, setGamingSets] = useState(false)
+  const [diceSet, setDiceSet] = useState(false)
+  const handleDiceSet = (e) => setDiceSet(true)
 
   const [herbalismKit, setHerbalismKit] = useState(false)
+  const handleHerbalismKit = (e) => setHerbalismKit(true)
 
   const [musicalInstruments, setMusicalInstruments] = useState(false)
+  const handleMusicalInstruments = (e) => setMusicalInstruments(true)
 
   const [navigatorTools, setNavigatorTools] = useState(false)
+  const handleNavigatorTools = (e) => setNavigatorTools(true)
 
   const [poisonerKit, setPoisonerKit] = useState(false)
+  const handlePoisonerKit = (e) => setPoisonerKit(true)
 
   const [thievesTools,setThievesTools] = useState(false)
+  const handleThievesTools = (e) => setThievesTools(true)
 
   const [vehicles, setVehicles] = useState(false)
-
+  const handleVehicles = (e) => setVehicles(true)
   // skills
   
   const [athletics, setAthletics] = useState(false)
+  const handleAthletics = (e) => setAthletics(true)
   
   const [acrobatics, setAcrobatics] = useState(false)
-  
+  const handleAcrobatics = (e) => setAcrobatics(true)
+
   const [sleightOfHand, setSleightOfHand] = useState(false)
-  
+  const handleSleightOfHand = (e) => setSleightOfHand(true)
+
   const [stealth, setStealth] = useState(false)
-  
+  const handleStealth = (e) => setStealth(true)
+
   const [arcana, setArcana] = useState(false)
+  const handleArcana= (e) => setArcana(true)
   
   const [history, setHistory] = useState(false)
+  const handleHistory = (e) => setHistory(true)
 
   const [investigation, setInvestigation] = useState(false)
+  const handleInvestigation = (e) => setInvestigation(true)
 
   const [nature, setNature] = useState(false)
+  const handleNature = (e) => setNature(true)
 
   const [religion, setReligion] = useState(false)
+  const handleReligion = (e) => setReligion(true)
 
   const [animalHandling, setAnimalHandling] = useState(false)
+  const handleAnimalHandling = (e) => setAnimalHandling(true)
 
   const [insight, setInsight] = useState(false)
+  const handleInsight = (e) => setInsight(true)
 
   const [medicine, setMedicine] = useState(false)
+  const handleMedicine = (e) => setMedicine(true)
 
   const [perception, setPerception] = useState(false)
+  const handlePerception = (e) => setPerception(false)
 
   const [survival, setSurvival] = useState(false)
+  const handleSurvival = (e) => setSurvival(false)
 
   const [persuasion, setPersuasion] = useState(false)
+  const handlePersuasion = (e) => setPersuasion(true)
 
   const [deception, setDeception] = useState(false)
+  const handleDeception = (e) => setDeception(true)
 
   const [intimidation, setIntimidation] = useState(false)
+  const handleIntimidation = (e) => setIntimidation(true)
 
   const [performance, setPerformance] = useState(false)
+  const handlePerformance = (e) => setPerformance(true)
 
   // spells and cantrips
   const [cantrip1, setCantrip1] = useState("");
-
+  const handleCantrip1 = (e) => setCantrip1(e.target.value)
+  
   const [cantrip2, setCantrip2] = useState("");
+  const handleCantrip2 = (e) => setCantrip2(e.target.value)
 
   const [cantrip3, setCantrip3] = useState("");
+  const handleCantrip3 = (e) => setCantrip3(e.target.value)
 
   const [cantrip4, setCantrip4] = useState("");
-
+  const handleCantrip4 = (e) => setCantrip4(e.target.value)
 
   const [spell1, setSpell1] = useState("");
-  const handleSpell1 = setSpell1(e.target.value)
+  const handleSpell1 = (e) => setSpell1(e.target.value)
 
   const [spell2, setSpell2] = useState("");
-  const handleSpell2 = setSpell2(e.target.value)
+  const handleSpell2 = (e) => setSpell2(e.target.value)
   
   const [spell3, setSpell3] = useState("");
-  const handleSpell3 = setSpell3(e.target.value)
+  const handleSpell3 = (e) => setSpell3(e.target.value)
   
   const [spell4, setSpell4] = useState("");
-  const handleSpell4 = setSpell4(e.target.value)
+  const handleSpell4 = (e) => setSpell4(e.target.value)
   
   const [spell5, setSpell5] = useState("");
-  const handleSpell5 = setSpell5(e.target.value)
+  const handleSpell5 = (e) => setSpell5(e.target.value)
   
   const [spell6, setSpell6] = useState("");
-  const handleSpell6 = setSpell6(e.target.value)
+  const handleSpell6 = (e) => setSpell6(e.target.value)
   
   const [spell7, setSpell7] = useState("");
-  const handleSpell7 = setSpell7(e.target.value)
+  const handleSpell7 = (e) => setSpell7(e.target.value)
 
   // gear and inventory
   const [weapon, setWeapon] = useState("");
@@ -308,6 +329,9 @@ function CharacterGenerator() {
   const [currency, setCurrency] = useState(0);
   const hanleCurrency = (e) => setCurrency(e.target.value)
 
+  const [prompt, setPrompt] = useState('')
+  const handlePrompt = setPrompt(`Photorealistic portrait of a ${setSkinColor}-skinned $(setSex) ${setJob} dungeons and dragons character that has ${setEyeColor} eyes, ${setHairColor} colored hair styled as ${setHairStlye}, wearing ${armor} and wielding ${setWeapon}.`)
+
   const handleSubmit = (e) => e.preventDefault(); 
 
   return (
@@ -320,14 +344,14 @@ function CharacterGenerator() {
             type= 'text'
             name= 'name'
             value={name}
-            onChange={handleChange}/>
+            onChange={handleName}/>
 
         <label>Campaign name: </label>
           <input 
             type= 'text'
             name= 'campaign'
             value={campaign}
-            onChange={handleChange}/>
+            onChange={handleCampaign}/>
 
         <label>Character name: </label>
           <select 
@@ -346,7 +370,7 @@ function CharacterGenerator() {
             type= 'text'
             name= 'race'
             value={race}
-            onChange={handleChange}>
+            onChange={handleRace}>
             <option value="human">human</option>
             <option value="dwarf">dwarf</option>
             <option value="elf">elf</option>
@@ -357,7 +381,7 @@ function CharacterGenerator() {
             type= 'text'
             name= 'class'
             value={job}
-            onChange={handleChange}>
+            onChange={handleJob}>
             <option value="barbarian">barbarian</option>
             <option value="rogue">rogue</option>
             <option value="cleric">cleric</option>
@@ -366,19 +390,19 @@ function CharacterGenerator() {
 
 // help here, not sure if this is correctly setting it to the Strength score state.
           <label> Choose your strengh score: </label>
-          <input type="radio" name="strAbility" value={strRoll1} />
-            <label for='D6 Roll 1'> Result: {strRoll1}</label><br/>
-          <input type="radio" name="strAbility" value={strRoll2} />
-            <label for="D6 Roll 2"> Result: {strRoll2}</label><br/>
-          <input type="radio" name="strAbility" value={strRoll3} />
-            <label for="D6 Roll 3"> Result: {strRoll3}</label> <br/>
+          <input type="radio" name="strAbility" value= {diceRoll(6)} />
+            <label for='D6 Roll 1'> Result:  </label><br/>
+          <input type="radio" name="strAbility" value= {diceRoll(6)} />
+            <label for="D6 Roll 2"> Result:</label><br/>
+          <input type="radio" name="strAbility" value= {diceRoll(6)} />
+            <label for="D6 Roll 3"> Result: </label> <br/>
 
         <label> Hair color: </label>
           <select 
             type= 'text'
             name= 'hairColor'
             value={hairColor}
-            onChange={handleChange}>
+            onChange={handleHairColor}>
             <option value="black">black</option>
             <option value="brown">brown</option>
             <option value="blond">blond</option>
@@ -390,7 +414,7 @@ function CharacterGenerator() {
               type= 'text'
               name= 'hairStyle'
               value={hairStlye}
-              onChange={handleChange}>
+              onChange={handleHairStyle}>
               <option value="straight-hair">straigth</option>
               <option value="curly">curly</option>
               <option value="braided">braided</option>
@@ -402,7 +426,7 @@ function CharacterGenerator() {
               type= 'text'
               name= 'eyeColor'
               value={eyeColor}
-              onChange={handleChange}>
+              onChange={handleEyeColor}>
               <option value="blue">blue</option>
               <option value="green">green</option>
               <option value="hazel">hazel</option>
@@ -414,7 +438,7 @@ function CharacterGenerator() {
               type= 'text'
               name= 'skinColor'
               value={skinColor}
-              onChange={handleChange}>
+              onChange={handleSkinColor}>
               <option value="fair">fair</option>
               <option value="olive">olive</option>
               <option value="red">red</option>
@@ -426,7 +450,7 @@ function CharacterGenerator() {
                 type= 'text'
                 name= 'bodyType'
                 value={bodyType}
-                onChange={handleChange}>
+                onChange={handleBodyType}>
                 <option value="skinny">skinny</option>
                 <option value="toned">toned</option>
                 <option value="muscled">muscled</option>
@@ -438,7 +462,7 @@ function CharacterGenerator() {
               type= 'text'
               name= 'background'
               value={background}
-              onChange={handleChange}>
+              onChange={handleBackground}>
               <option value="acolyte">acolyte</option>
               <option value="criminal">criminal</option>
               <option value="lyceum-student">lyceum student</option>
@@ -458,7 +482,7 @@ function CharacterGenerator() {
               <label for="gnomish"> Gnomish </label>
             <input type="checkbox" name="language6" value={goblin} />
               <label for="goblin"> Goblin </label>
-            <input type="checkbox" name="language7" value={hafling} />
+            <input type="checkbox" name="language7" value={halfling} />
               <label for="hafling"> Hafling </label>
             <input type="checkbox" name="language8" value={orc} />
               <label for="orc"> Orc </label>
