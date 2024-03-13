@@ -1,0 +1,22 @@
+.toast {
+    position: fixed;
+    width: 100%;
+    max-width: 200px;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    user-select: none;
+    
+  }
+  .toast > image { 
+    position: relative;
+  }
+  .toast > p { 
+    position: absolute;
+    top: 75%;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.116);
+  }
+  .toast.active {
+    bottom: 20px;
+  }
