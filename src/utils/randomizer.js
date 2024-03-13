@@ -4,6 +4,30 @@ export function diceRoll (dnumber) {
   return roll
 };
 
+export function abilityBonus (abilityScore) {
+  if(abilityScore >= 20){
+      return 5
+    }
+    else if(abilityScore == 19 || abilityScore == 18) {
+      return 4
+    }
+    else if(abilityScore == 17 || abilityScore == 16) {
+      return 3
+    }
+    else if(abilityScore == 15 || abilityScore == 14) {
+      return 2
+    }
+    else if(abilityScore == 13 || abilityScore == 12) {
+      return 1
+    }
+  } 
+  
+export function skillProficiency (skill) {
+
+return ( skill ? (abilityBonus(abilityScore)+2) : abilityBonus(abilityScore)
+)}
+
+
 export const storiesImagesArray = [
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/experience1.png?raw=true",
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/experience2.png?raw=true",
