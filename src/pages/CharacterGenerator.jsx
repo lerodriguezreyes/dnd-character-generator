@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { diceRoll } from "../utils/randomizer"
 import { GeneratorContext } from "../context/generator.context"
- 
+import { useNavigate } from "react-router-dom";
 
 function CharacterGenerator() {
   
@@ -34,20 +34,25 @@ function CharacterGenerator() {
   const handleCheck = (e) =>{
   setCharacter(prev => ({...prev, [e.target.name]: e.target.checked}))
   }
+
+
+
 useEffect(() => {
   console.log(character), [character]
 })
+
+const navigate = useNavigate();
  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newCharacter = {character}
-
+    const newCharacter = {...character}
       addNewCharacter(newCharacter)
+      // navigate('/character' )
   }
   
 
   return (
-  <div>
+  <div className="addCharacter">
     <h2> Character Generator </h2>
       <form onSubmit={handleSubmit}>
 
@@ -62,6 +67,18 @@ useEffect(() => {
             type='text'
             name='campaign'
             onChange={(e) => handleChange(e)}/>
+
+        <label>Level: </label>
+          <input
+          type="text"
+          name= 'lv'
+          onChange={handleChange} />
+
+        <label>Xp: </label>
+          <input
+          type="text"
+          name= 'xp'
+          onChange={handleChange} />
 
         <label> Choose your sex: </label>
           <select
@@ -179,10 +196,10 @@ useEffect(() => {
               name='hairStyle'
               
               onChange={(e) => handleChange(e)}>
-              <option value="straight-hair">straight</option>
-              <option value="curly">curly</option>
-              <option value="braided">braided</option>
-              <option value="bald">bald</option>
+              <option value="long straight hair">straight</option>
+              <option value="curly hair">curly</option>
+              <option value="braided hair">braided</option>
+              <option value="short hair ">short</option>
           </select>
 
           <label> Eye color: </label>
@@ -283,96 +300,14 @@ useEffect(() => {
             <label> Plate Armor </label>
 
           <label> What languages do you speak?: </label>
+          <div className="container">
             <input type="checkbox" name="commonLanguage" onChange={handleCheck} />
               <label> Common </label>
             <input type="checkbox" name="dwarvishLanguage" onChange={handleCheck} />
               <label> Dwarvish </label>
             <input type="checkbox" name="elvishLanguage" onChange={handleCheck} />
               <label> Elvish </label>
-            <input type="checkbox" name="giantLanguage" onChange={handleCheck} />
-              <label> Giant </label>
-            <input type="checkbox" name="gnomishLanguage" onChange={handleCheck} />
-              <label> Gnomish </label>
-            <input type="checkbox" name="goblinLanguage" onChange={handleCheck} />
-              <label> Goblin </label>
-            <input type="checkbox" name="halflingLanguage" onChange={handleCheck} />
-              <label> Hafling </label>
-            <input type="checkbox" name="orcLanguage" onChange={handleCheck} />
-              <label> Orc </label>
-            <input type="checkbox" name="abyssalLanguage" onChange={handleCheck} />
-              <label> Abyssal </label>
-            <input type="checkbox" name="celestialLanguage" onChange={handleCheck} />
-              <label> Celestial </label>
-            <input type="checkbox" name="draconicLanguage" onChange={handleCheck} />
-              <label> Draconic </label>
-            <input type="checkbox" name="deepSpeechLanguage" onChange={handleCheck} />
-              <label> Deep Speech </label>
-            <input type="checkbox" name="infernalLanguage" onChange={handleCheck} />
-              <label> Infernal </label>
-            <input type="checkbox" name="primordialLanguage" onChange={handleCheck} />
-              <label> Primordial </label>
-            <input type="checkbox" name="sylvanLanguage" onChange={handleCheck} />
-              <label> Sylvan </label>
-            <input type="checkbox" name="undercommonLanguage" onChange={handleCheck} />
-              <label> Undercommon </label>
-
-          <label> Choose your tools: </label>
-            <input type="checkbox" name="artisanTools" onChange={handleCheck} />
-              <label> Artisan's Tools </label>
-            <input type="checkbox" name="alchemistSupplies" onChange={handleCheck} />
-              <label> Alchemist's Supplies </label>
-            <input type="checkbox" name="brewerSupplies" onChange={handleCheck}/>
-              <label> Brewer Supplies </label>
-            <input type="checkbox" name="calligrapherSupplies" onChange={handleCheck} />
-              <label> Calligrapher's Supplies </label>
-            <input type="checkbox" name="carpenterTools" onChange={handleCheck} />
-              <label> Carpenter's Tools </label>
-            <input type="checkbox" name="cartographerTools" onChange={handleCheck} />
-              <label> Cartographer's Tools </label>
-            <input type="checkbox" name="cobblerTools" onChange={handleCheck} />
-              <label> Cobbler's Tools </label>
-            <input type="checkbox" name="cookTools" onChange={handleCheck} />
-              <label> Cook's Tools </label>
-            <input type="checkbox" name="glassblowerTools" onChange={handleCheck} />
-              <label> Glassblower's Tools </label>
-            <input type="checkbox" name="thievesTools" onChange={handleCheck} />
-              <label> Thieves' Tools </label>
-            <input type="checkbox" name="jewellerTools" onChange={handleCheck} />
-              <label> Jeweller's Tools </label>
-            <input type="checkbox" name="leatherworkerTools" onChange={handleCheck} />
-              <label> Leatherworker's Tools </label>
-            <input type="checkbox" name="masonTools" onChange={handleCheck} />
-              <label> Mason's Tools </label>
-            <input type="checkbox" name="painterSupplies" onChange={handleCheck} />
-              <label> Painter's Supplies </label>
-            <input type="checkbox" name="potterTools" onChange={handleCheck} />
-              <label> Potter's Tools </label>
-            <input type="checkbox" name="smithTools" onChange={handleCheck} />
-              <label> Smith's Tools </label>
-            <input type="checkbox" name="tinkerTools" onChange={handleCheck} />
-              <label> Tinker's Tools </label>
-            <input type="checkbox" name="weaverTools" onChange={handleCheck} />
-              <label> Weaver's Tools </label>
-            <input type="checkbox" name="woodcarverTools" onChange={handleCheck} />
-              <label> Woodcarver's Tools </label>
-            <input type="checkbox" name="disguiseKit" onChange={handleCheck} />
-              <label> Disguise Kit </label>
-            <input type="checkbox" name="forgeryKit" onChange={handleCheck} />
-              <label> Forgery Kit </label>
-            <input type="checkbox" name="diceSet" onChange={handleCheck} />
-              <label> Dice Set </label>
-            <input type="checkbox" name="cardSet" onChange={handleCheck} />
-              <label> Playing Cards Set </label>
-            <input type="checkbox" name="herbalismKit" onChange={handleCheck} />
-              <label> Herbalism Kit </label>
-            <input type="checkbox" name="forgeryKit" onChange={handleCheck} />
-            <label> Forgery Kit </label> 
-              <input type="checkbox" name="musicalInstrument" onChange={handleCheck} />
-            <label> Musical Instrument </label>
-              <input type="checkbox" name="navigatorTools" onChange={handleCheck} />
-            <label> Navigator Tools </label>
-              <input type="checkbox" name="poisonerKit" onChange={handleCheck} />
-            <label> Poisoner Kit </label>
+              </div>
 
           <label> Choose skill to add proficiency: </label>
             <input type="checkbox" name="athletics" onChange={handleCheck} />
