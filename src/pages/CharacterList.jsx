@@ -5,12 +5,12 @@ import { GeneratorContext } from "../context/generator.context"
 
 function CharacterList() {
 
-const {characters, setCharacters} = useContext(GeneratorContext)
+const {charactersData, setCharactersData} = useContext(GeneratorContext)
 
   return (
     <div>
     <h3>Character List</h3>
-    {characters.map((character) => {
+    {charactersData.map((character) => {
 
       return <CharacterCard key={ character.id } character={ character } />
     })}
