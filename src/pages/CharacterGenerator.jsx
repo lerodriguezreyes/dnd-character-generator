@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { diceRoll } from "../utils/randomizer"
-
+import { GeneratorContext } from "../context/generator.context"
+ 
 
 function CharacterGenerator() {
-
+  
+  const { addNewCharacter} = useContext(GeneratorContext)
+  
   const [roll1, setRoll1] = useState(diceRoll(6))
   const [roll2, setRoll2] = useState(diceRoll(6))
   const [roll3, setRoll3] = useState(diceRoll(6))
@@ -36,116 +39,10 @@ useEffect(() => {
 })
  const handleSubmit = (e) => {
     e.preventDefault();
-    // const textToImagePrompt = `Photorealistic portrait of a ${skinColor}-skinned ${sex} ${job} dungeons and dragons character that has ${eyeColor} eyes, ${hairColor} colored hair styled ${hairStlye} fashion, wearing ${armor} and wielding ${mainWeapon}.`
-    const newCharacter = {
-      name,
-      campaign,
-      sex,
-      race,
-      job,
-      strAbility,
-      conAbility,
-      dexAbility,
-      intAbility,
-      wisAbility,
-      chaAbility,
-      hairColor,
-      hairStlye,
-      eyeColor,
-      skinColor,
-      bodyType,
-      background,
-      mainWeapon,
-      rangedWeapon,
-      armor,
-      commonLanguage,
-      dwarvishLanguage,
-      elvishLanguage,
-      giantLanguage,
-      gnomishLanguage,
-      goblinLanguage,
-      halflingLanguage,
-      orcLanguage,
-      abyssalLanguage,
-      celestialLanguage,
-      draconincLanguage,
-      deepSpeechLanguage,
-      infernalLanguage,
-      primordialLanguage,
-      sylvanLanguage,
-      undercommonLanguage,
-      artisanTools,
-      alchemistSupplies,
-      brewerSupplies,
-      calligrapherSupplies,
-      carpenterTools,
-      cartographerTools,
-      cobblerTools,
-      cookTools,
-      glassblowerTools,
-      thievesTools,
-      jewellerTools,
-      leatherworkerTools,
-      masonTools,
-      painterSupplies,
-      potterTools,
-      smithTools,
-      tinkerTools,
-      weaverTools,
-      woodcarverTools,
-      disguiseKit,
-      cardSet,
-      diceSet, 
-      herbalismKit,
-      forgeryKit,
-      musicalInstrument,
-      navigatorTools,
-      poisonerKit,
-      athletics,
-      acrobatics,
-      sleightOfHand,
-      stealth,
-      arcana,
-      history,
-      investigation,
-      nature,
-      religion,
-      animalHandling,
-      insight,
-      medicine,
-      perception,
-      survival,
-      persuasion,
-      deception,
-      intimidation,
-      performance,
-      cantrip1,
-      cantrip2,
-      cantrip3,
-      cantrip4,
-      cantrip5,
-      spell1,
-      spell2,
-      spell3,
-      spell4,
-      spell5,
-      spell6,
-      spell7,
-      spell8,
-      spell9,
-      spell10,
-      weapon,
-      rangedWeapon,
-      armor,
-      hasShield,
-      starterpack,
-      currency,
-      prompt}
+
+    const newCharacter = {character}
 
       addNewCharacter(newCharacter)
-
-      setCharacter(null)
-
   }
   
 
