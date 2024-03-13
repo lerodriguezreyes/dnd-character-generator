@@ -22,7 +22,7 @@ useEffect (() => {
 
     const addNewCharacter = (newCharacter) => {
         newCharacter.id = String(characterIds)
-        let newCharacters = [newCharacter, ...characters]
+        let newCharacters = [newCharacter, ...charactersData]
         setCharacterIds((prev) => prev + 1)
         setCharactersData(newCharacters)
         axios.post(BACKEND_URL + 'characters')
@@ -35,10 +35,19 @@ useEffect (() => {
       }
     
     const deleteCharacter = (characterId) => {
-        const filteredCharacters = characters.filter((character) => {
+        const filteredCharacters = charactersData.filter((character) => {
+        axios.delete(BACKEND_URL + 'characters/'+ characterId)
+            .then((response) => {
+                console.log('Character removed ===>', response.data)
+                })
+            .catch((error) => {
+                console.log(error)
+            })
           return character.id !== characterId;
         })
-        setCharacters(filteredCharacters);
+        setCharactersData(filteredCharacters);
+        
+       
       }
 
 
