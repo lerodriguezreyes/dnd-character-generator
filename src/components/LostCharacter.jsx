@@ -18,3 +18,25 @@ function LostCharacter() {
 }
 
 export default LostCharacter;
+
+
+// function LostCharacter() {
+//   return (
+//     <div>
+//       <h1 id="lostHeader"> Seems that character has not been created yet.</h1>
+//       <img
+//         id="lostAdventurer"
+//         width={"100%"}
+//         height={"100%"}
+//         src="https://takeitpersonelly.com/wp-content/uploads/2020/04/old-1130743_1920.jpg?w=723"
+//         alt="lost adventurer"
+//       />
+//       <h2 id="lostMessege">
+//         {" "}
+//         Roll another one!
+//       </h2>
+//     </div>
+//   );
+// }
+
+// export default LostCharacter;
