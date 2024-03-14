@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^3.3.8",
     "axios": "^1.6.7",
     "monsterapi": "^0.0.3",
+    "openai": "^4.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "react-to-pdf": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

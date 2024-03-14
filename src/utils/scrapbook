@@ -1,3 +1,7 @@
+// OPENAI
+
+
+
 
 // {
 // name,
@@ -188,15 +192,15 @@
             //   <input type="checkbox" name="poisonerKit" onChange={handleCheck} />
             // <label> Poisoner Kit </label> 
 
-// const textToImagePrompt = `Photorealistic portrait of a ${character.race} ${character.skinColor}-skinned ${character.sex} ${character.job} dungeons and dragons character that has ${character.eyeColor} eyes, ${character.hairColor} colored hair ${character.hairStlye} styled, wearing ${character.armor} and wielding a ${character.mainWeapon}.`
-
-// generate a photorealistic portrait of a human fair-skinned male barbarian dungeons and dragons character that has brown eyes, brown colored hair in a braided hair style, wearing leather armor and wielding a great axe.
 
 
+
+//   imageFetcher()
 
 // import MonsterApiClient from "monsterapi"
 // import { useEffect } from "react"
 // import { token } from "../utils/IMG_API"
+// const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlNDllODQ4Y2M5MDIyZWQwOTQ3ZDU1NWMyY2EzYmM1IiwiY3JlYXRlZF9hdCI6IjIwMjQtMDMtMTNUMTQ6Mjc6MDEuODY2Mjc5In0.shq9Jvr9nQGcByb7M7GATiXtIfrd_Abq3Ekz8_ZJPjA"
 
   
 //   const imgGenerator = () => {
@@ -227,3 +231,4 @@
 //       // Handle API errors
 //       console.error('Error:', error);
 //     });
+
