@@ -1,18 +1,27 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { GeneratorContext } from "../context/generator.context";
+import LostCharacter from "../components/LostCharacter";
 import axios from "axios";
 import { BACKEND_URL } from "../utils/BACKEND_API";
 
 function CharacterEdit() {
   const [editCharacter, setEditCharacter] = useState(null);
   const [thisIndex, setThisIndex] = useState(0);
-  const { charactersData, setCharactersData } = useContext(GeneratorContext);
+  const { charactersData, setCharactersData, getCharacters } = useContext(GeneratorContext);
   const { foundId } = useParams();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setEditCharacter((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if ( e.target.type === "radio") {
+      if ( e.target.checked === true) {
+        setEditCharacter((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+      }
+    } else {
+
+      setEditCharacter((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    }
+    console.log("this is character as it is changing", editCharacter)
   };
 
   const handleCheck = (e) => {
@@ -24,29 +33,36 @@ function CharacterEdit() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .put(BACKEND_URL + "characters" + `/${foundId}`, editCharacter)
+      .then((response) => {
+        console.log("Character updated ===>", response.data);
+        getCharacters()
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        navigate(`/detail/${foundId}`)  
+      })
 
-    let newCharacter = [...charactersData];
-    newCharacter[thisIndex] = editCharacter;
-    setCharactersData(newCharacter);
-    // axios.put(BACKEND_URL +'characters'+'foundId' ,newCharacter )
-    // .then
-    //.catch
-    navigate(`/details/${foundId}`);
-  };
+  }
 
   useEffect(() => {
     let foundCharacter = charactersData.find((character, i) => {
       setThisIndex(i);
       return character.id === foundId;
     });
-    console.log(foundCharacter);
-    setEditCharacter(foundCharacter);
-  }, []);
+    console.log('This is the found character to be edited ==>',foundCharacter);
+    setEditCharacter(foundCharacter); 
+  },[charactersData]);
 
   return (
     <>
       <h2>Edit Character</h2>
+      {!editCharacter && <LostCharacter />}
       {editCharacter && (
+        <div>
         <form onSubmit={handleSubmit}>
           <label>Character name: </label>
           <input
@@ -81,6 +97,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="sword"
+            defaultChecked={editCharacter.mainWeapon == "sword"}
             onChange={(e) => handleChange(e)}
           />
           <label> Sword </label>
@@ -88,6 +105,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="greatAxe"
+            defaultChecked={editCharacter.mainWeapon == "greatAxe"}
             onChange={(e) => handleChange(e)}
           />
           <label> Great Axe </label>
@@ -95,6 +113,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="mace"
+            defaultChecked={editCharacter.mainWeapon == "mace"}
             onChange={(e) => handleChange(e)}
           />
           <label> Mace </label>
@@ -102,6 +121,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="quarterstaff"
+            defaultChecked={editCharacter.mainWeapon == "quarterstaff"}
             onChange={(e) => handleChange(e)}
           />
           <label> Quarterstaff </label>
@@ -109,6 +129,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="dagger"
+            defaultChecked={editCharacter.mainWeapon == "dagger"}
             onChange={(e) => handleChange(e)}
           />
           <label> Dagger </label>
@@ -116,6 +137,7 @@ function CharacterEdit() {
             type="radio"
             name="mainWeapon"
             value="spear"
+            defaultChecked={editCharacter.mainWeapon == "spear"}
             onChange={(e) => handleChange(e)}
           />
           <label> Spear </label>
@@ -236,7 +258,7 @@ function CharacterEdit() {
           <label> Animal Handling - Wisdom based </label>
           <input type="checkbox" name="insight" onChange={handleCheck} />
           <label> Insight - Wisdom based </label>
-          <input type="checkbox" name="medicine" onChange={handleCheck} />
+          <input type="checkbox" name="medicine" checked={editCharacter.medicine} onChange={handleCheck} />
           <label> Medicine - Wisdom based </label>
           <input type="checkbox" name="perception" onChange={handleCheck} />
           <label> Perception - Wisdom based </label>
@@ -250,7 +272,9 @@ function CharacterEdit() {
           <label> Intimidation - Charisma based </label>
           <input type="checkbox" name="performance" onChange={handleCheck} />
           <label> Performance - Charisma based </label>
+        <button type= 'submit'>Submit Changes</button>
         </form>
+        </div>
       )}
     </>
   );
