@@ -1,0 +1,64 @@
+.landingScreen{
+    background-image: url("https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/otherPagesBackground.png?raw=true");
+    background-size: cover;
+  }
+
+.pageHeader {
+    margin: 0;
+    padding-top: 30px;
+    border: 0;
+    text-align: center;
+    font-family: "whisper";
+    font-size: 36px;
+}
+  
+/*  Landing Screen with Polaroid effect */
+.wrapper {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+.polaroid > img {
+  max-width: 400px;
+  max-height: 400px;
+}
+.caption {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+.picture {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(100%);
+}
+.picture .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.picture:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.picture:hover .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  transition: all 0.35s;
+} 
