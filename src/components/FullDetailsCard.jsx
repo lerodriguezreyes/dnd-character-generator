@@ -2,12 +2,16 @@ import { useContext } from "react";
 import { GeneratorContext } from "../context/generator.context";
 import { abilityBonus, skillProficiency } from "../utils/randomizer";
 import { useNavigate } from "react-router-dom";
+import {usePDF} from 'react-to-pdf'
 
 function FullDetailsCard({ character }) {
+ 
+  const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
   const { deleteCharacter } = useContext(GeneratorContext);
 
-  return (
+  return ( 
     <div key={character.id} className="characterSheet">
+     <div ref={targetRef}>
       <p>Name: {character.name} </p>
       <p>Current Campaign: {character.campaign} </p>
       <p>Race: {character.race}</p>
@@ -63,6 +67,8 @@ function FullDetailsCard({ character }) {
       <div className="Armor">
         <p> Armor worn: {character.armor} </p>
       </div>
+    </div>
+    <button onClick={() => toPDF()}>Download PDF</button>
     </div>
   );
 }
