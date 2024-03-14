@@ -16,6 +16,7 @@ function CharacterDetailsPage() {
       <h1 className="pageHeader"> Character Details </h1>
       {!character && <LostCharacter />}
       {character && <FullDetailsCard character={character} />}
+      <Link to={`/edit/${characterId}`}> Edit character</Link>
     </div>
   );
 }
