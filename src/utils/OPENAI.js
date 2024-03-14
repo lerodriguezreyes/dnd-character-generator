@@ -1,6 +1,7 @@
 // // import { Configuration, OpenAIApi} from 'openai'
 // import OpenAI from "openai";
 import axios from "axios";
+
 // const openai = new OpenAI({
 //   apiKey: import.meta.env.VITE_MY_API_KEY,
 //   dangerouslyAllowBrowser: true,
@@ -26,7 +27,7 @@ import axios from "axios";
 export const imageGenerator = async (string) => {
   try {
     console.log(string)
-    const response = await axios.post("http://localhost:4000/ai/image-generator", {prompt:string});
+    const response = await axios.post(import.meta.env.VITE_SERVER_URL + "/ai/image-generator", {prompt:string});
     console.log(response);
     return response.data;
   } catch (error) {
