@@ -36,8 +36,8 @@ a {
 
 #navLinks {
 display: flex;
-text-align: center;
-justify-content: space-evenly;
+place-content: center space-around;
 background-color: rgba(255, 255, 255, 0.4);
+font-family: "Cinzel Decorative", serif;
 font-size: 14pt;
 }
