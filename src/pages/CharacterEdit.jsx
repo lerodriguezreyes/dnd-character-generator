@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { GeneratorContext } from "../context/generator.context";
 import LostCharacter from "../components/LostCharacter";
 import axios from "axios";
-import { BACKEND_URL } from "../utils/BACKEND_API";
+
 
 function CharacterEdit() {
   const [editCharacter, setEditCharacter] = useState(null);
@@ -40,7 +40,7 @@ function CharacterEdit() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(BACKEND_URL + "characters" + `/${foundId}`, editCharacter)
+      .put(import.meta.env.VITE_SERVER_URL + "characters" + `/${foundId}`, editCharacter)
       .then((response) => {
         console.log("Character updated ===>", response.data);
         getCharacters();

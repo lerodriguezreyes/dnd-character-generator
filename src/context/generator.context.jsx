@@ -1,9 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BACKEND_URL } from "../utils/BACKEND_API";
 import axios from "axios";
 import { imageGenerator } from "../utils/OPENAI";
-
 const GeneratorContext = createContext();
 const ContextProvider = ({ children }) => {
   const [charactersData, setCharactersData] = useState([]);
@@ -13,7 +11,7 @@ const ContextProvider = ({ children }) => {
 
   const getCharacters = () => {
     axios
-      .get(BACKEND_URL + "characters")
+      .get(import.meta.env.VITE_SERVER_URL + "/characters")
       .then((response) => {
         console.log("API character data object ====>", response.data);
         setCharactersData(response.data);
@@ -33,7 +31,7 @@ const ContextProvider = ({ children }) => {
       .then((url) => {
         newCharacter.image = url;
         axios
-          .post(BACKEND_URL + "characters", newCharacter)
+          .post(import.meta.env.VITE_SERVER_URL + "characters", newCharacter)
           .then((response) => {
             console.log("New Character added ===>", response.data);
             setCharactersData([...charactersData, response.data]);
@@ -53,7 +51,7 @@ const ContextProvider = ({ children }) => {
   const deleteCharacter = (characterId) => {
     const filteredCharacters = charactersData.filter((character) => {
       axios
-        .delete(BACKEND_URL + "characters/" + characterId)
+        .delete(import.meta.env.VITE_SERVER_URL + "characters/" + characterId)
         .then((response) => {
           console.log("Character removed ===>", response.data);
         })
