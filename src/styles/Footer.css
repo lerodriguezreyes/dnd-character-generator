@@ -1,0 +1,26 @@
+#Footer {
+  text-align: center;
+  background-image: url(https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/navMap.jpg?raw=true);
+}
+
+#p1 {
+  display: flex;
+  font-family: "Cinzel Decorative", serif;
+  justify-content: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+#p2 {
+  display: flex;
+  font-family: "Cinzel Decorative", serif;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+a {
+  color: black;
+}

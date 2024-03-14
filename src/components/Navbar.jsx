@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
+import '../styles/Navbar.css'
 function Navbar() {
   return (
     <section id="navBar">
-      <img
-        id="navLogo"
-        src="https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/logo.png?raw=true"
-      />
       <p id="pageTitle">Nexus Lorekeeper</p>
       <p id="pageSubTitle">Adventure Chronicler</p>
-      <hr />
       <div id="navLinks">
         <Link to="/" className="spread">
           Home

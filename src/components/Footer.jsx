@@ -1,7 +1,9 @@
+import '../styles/Footer.css'
+
 function Footer() {
   return (
-    <div id="footer">
-      <p>
+    <div id="Footer">
+      <p id="p1">
         Made with{" "}
         {
           <img
@@ -13,7 +15,7 @@ function Footer() {
         }
         by Luis Emmanuel
       </p>
-      <p>
+      <p id="p2">
         <a
           href="https://github.com/lerodriguezreyes/dnd-character-generator"
           className="spread"
