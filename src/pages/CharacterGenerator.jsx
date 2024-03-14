@@ -4,6 +4,7 @@ import { GeneratorContext } from "../context/generator.context";
 import { useNavigate } from "react-router-dom";
 
 function CharacterGenerator() {
+
   const { addNewCharacter } = useContext(GeneratorContext);
 
   const [roll1, setRoll1] = useState(diceRoll(6));
@@ -39,6 +40,7 @@ function CharacterGenerator() {
   });
 
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
