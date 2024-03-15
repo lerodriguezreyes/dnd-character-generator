@@ -15,7 +15,7 @@ function CharacterCard({ character }) {
       <img className="profile" src={character.image} />
       <p className="bookText">Class: {character.job} </p>
       <p className="bookText">Campaign: {character.campaign} </p>
-      <button onClick={() => deleteCharacter(character.id)}>Put back in the shelf </button>
+      <button className="bookButton" onClick={() => deleteCharacter(character.id)}>Put back in the shelf </button>
     </div>
     </div>
   );

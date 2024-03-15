@@ -9,9 +9,11 @@ function CharacterList() {
   return (
     <div className="characterList">
       <h2 className="pageHeader">Existing Characters</h2>
+      <div className="booksRow">
       {charactersData.map((character) => {
         return <CharacterCard key={character.id} character={character} />;
       })}
+      </div>
     </div>
   );
 }

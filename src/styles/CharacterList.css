@@ -3,6 +3,12 @@
     background-size: cover;
 }
 
+.booksRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .pageHeader {
     text-align: center;
     font-size: 32pt;
@@ -12,3 +18,12 @@
     background-color: rgba(0, 0, 0, 0.432);
     margin: 0;
 }
+
+@media only screen and (max-width: 390px) {
+
+    .booksRow{
+        display: flex;
+        flex-wrap: column;
+        justify-content: center;
+    }
+  }
