@@ -27,7 +27,7 @@ import axios from "axios";
 export const imageGenerator = async (string) => {
   try {
     console.log(string)
-    const response = await axios.post(import.meta.env.VITE_SERVER_URL + "/ai/image-generator", {prompt:string});
+    const response = await axios.post(import.meta.env.VITE_SERVER_URL + "ai/image-generator", {prompt:string});
     console.log(response);
     return response.data;
   } catch (error) {

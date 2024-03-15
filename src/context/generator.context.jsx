@@ -11,7 +11,7 @@ const ContextProvider = ({ children }) => {
 
   const getCharacters = () => {
     axios
-      .get(import.meta.env.VITE_SERVER_URL + "/characters")
+      .get(import.meta.env.VITE_SERVER_URL + "characters")
       .then((response) => {
         console.log("API character data object ====>", response.data);
         setCharactersData(response.data);
@@ -49,15 +49,17 @@ const ContextProvider = ({ children }) => {
   };
 
   const deleteCharacter = (characterId) => {
+    console.log("Deleting character!!!!")
+    console.log("this is the env variable", import.meta.env.VITE_SERVER_URL)
+    axios
+      .delete(import.meta.env.VITE_SERVER_URL + "characters/" + characterId)
+      .then((response) => {
+        console.log("Character removed ===>", response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     const filteredCharacters = charactersData.filter((character) => {
-      axios
-        .delete(import.meta.env.VITE_SERVER_URL + "characters/" + characterId)
-        .then((response) => {
-          console.log("Character removed ===>", response.data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
       return character.id !== characterId;
     });
     setCharactersData(filteredCharacters);
