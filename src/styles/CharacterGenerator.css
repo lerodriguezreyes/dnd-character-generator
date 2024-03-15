@@ -5,8 +5,7 @@
     text-align: center;
     font-family: "whisper", cursive;
     font-size: 20pt;
-    margin: 5px;
-    margin-bottom: 0;
+    margin: 0;
     background-image: url('https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/paper.png?raw=true');
   }
 
@@ -142,7 +141,7 @@
     font-family: "Cinzel Decorative", serif;
     color: rgb(220, 205, 191);
     background-color: rgba(0, 0, 0, 0.712);
-    margin: 10px 0px 25px 0px;
+    margin: 0;
   }
 
 .row{
@@ -163,6 +162,7 @@
     display: inline-block;
     font-family: "whisper";
     background-color: rgba(255, 255, 255, 0.45);
+    font-size: 16pt;
   }
   
 

@@ -595,11 +595,11 @@ function CharacterGenerator() {
           <label> Sleigth Of Hand </label>
           <input type="checkbox" name="sleigthOfHand" onChange={handleCheck} />
           <label> Stealth </label>
+          <input type="checkbox" name="stealth" onChange={handleCheck} />
         </div>
 
         <h4> Inteligence based skills </h4>
         <div className="row">
-          <input type="checkbox" name="stealth" onChange={handleCheck} />
           <label> Arcana </label>
           <input type="checkbox" name="arcana" onChange={handleCheck} />
           <label> History </label>
@@ -609,11 +609,11 @@ function CharacterGenerator() {
           <label> Nature </label>
           <input type="checkbox" name="nature" onChange={handleCheck} />
           <label> Religion </label>
+          <input type="checkbox" name="religion" onChange={handleCheck} />
         </div>
 
         <h4> Wisdom based skills </h4>
         <div className="row">
-          <input type="checkbox" name="religion" onChange={handleCheck} />
           <label> Animal Handling </label>
           <input type="checkbox" name="animalHandling" onChange={handleCheck} />
           <label> Insight </label>
