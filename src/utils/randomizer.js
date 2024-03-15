@@ -29,6 +29,8 @@ export const storiesImagesArray = [
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/experience7.png?raw=true",
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/experience8.png?raw=true",
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/experience9.png?raw=true",
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/nat1.jpg?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/wholesomedndexperience.png?raw=true'
 ];
 
 export const dndMemesArray = [
