@@ -1,7 +1,9 @@
+import '..//styles/LostPage.css'
+
 function LostPage() {
   return (
     <div>
-      <h1 id="lostHeader"> Guess that was a bad roll! </h1>
+      <h2 className="pageHeader"> I feel so lost... </h2>
       <img
         id="lostAdventurer"
         width={"100%"}
@@ -9,7 +11,7 @@ function LostPage() {
         src="https://images.newscientist.com/wp-content/uploads/2020/02/25113425/fnb1ej_web.jpg"
         alt="dice roll"
       />
-      <h2 id="lostMessege"> May the odds ever be in your favor!</h2>
+      <h2 className="pageHeader"> I'm so alone here! </h2>
     </div>
   );
 }

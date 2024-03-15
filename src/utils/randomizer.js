@@ -43,3 +43,14 @@ export const dndMemesArray = [
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/unconfortableOrc.png?raw=true",
   "https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/wizardFireball.png?raw=true",
 ];
+
+export const bookCoversArray = [
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book2.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book3.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book4.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book5.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book6.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book7.png?raw=true',
+  'https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/book8.png?raw=true'
+]
