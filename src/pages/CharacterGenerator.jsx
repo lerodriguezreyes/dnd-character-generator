@@ -102,22 +102,22 @@ function CharacterGenerator() {
             name="background"
             onChange={(e) => handleChange(e)}
           >
-            <option value="acolyte">acolyte</option>
-            <option value="charlatan">acolyte</option>
-            <option value="criminalSpy">criminal/spy</option>
-            <option value="entertainer">entertainer</option>
-            <option value="folkHero">folk hero</option>
-            <option value="gladiator">gladiator</option>
-            <option value="guildArtisan">guild artisan</option>
-            <option value="hermit">hermit</option>
-            <option value="knight">knight</option>
-            <option value="noble">noble</option>
-            <option value="outlander">outlander</option>
-            <option value="pirate">pirate</option>
-            <option value="sage">sage</option>
-            <option value="sailor">sailor</option>
-            <option value="soldier">soldier</option>
-            <option value="urchin">urchin</option>
+            <option value="Acolyte">Acolyte</option>
+            <option value="Charlatan">Acolyte</option>
+            <option value="CriminalSpy">Criminal/Spy</option>
+            <option value="Entertainer">Entertainer</option>
+            <option value="FolkHero">Folk Hero</option>
+            <option value="Gladiator">Gladiator</option>
+            <option value="GuildArtisan">Guild Artisan</option>
+            <option value="Hermit">Hermit</option>
+            <option value="Knight">Knight</option>
+            <option value="Noble">Noble</option>
+            <option value="Outlander">Outlander</option>
+            <option value="Pirate">Pirate</option>
+            <option value="Sage">Sage</option>
+            <option value="Sailor">Sailor</option>
+            <option value="Soldier">Soldier</option>
+            <option value="Urchin">Urchin</option>
           </select>
         </div>
 
@@ -128,7 +128,7 @@ function CharacterGenerator() {
             <option value="Cisgender Male">Male</option>
             <option value="Cisgender Female">Female</option>
             <option value="Transgender Male">Transgender Male</option>
-            <option value="Transgender Female">Transgender female</option>
+            <option value="Transgender Female">Transgender Female</option>
             <option value="NonBinary">Non-binary</option>
           </select>
 
@@ -151,10 +151,10 @@ function CharacterGenerator() {
             name="hairColor"
             onChange={(e) => handleChange(e)}
           >
-            <option value="black">black</option>
-            <option value="brown">brown</option>
-            <option value="blond">blond</option>
-            <option value="red">red</option>
+            <option value="Black">black</option>
+            <option value="Brown">brown</option>
+            <option value="Blond">blond</option>
+            <option value="Red">red</option>
           </select>
 
           <label> Hair style: </label>
@@ -163,18 +163,18 @@ function CharacterGenerator() {
             name="hairStyle"
             onChange={(e) => handleChange(e)}
           >
-            <option value="long straight hair">straight</option>
-            <option value="curly hair">curly</option>
-            <option value="braided hair">braided</option>
-            <option value="short hair ">short</option>
+            <option value="Long Straight Hair">Straight</option>
+            <option value="C1urly Hair">Curly</option>
+            <option value="Braided Hair">Braided</option>
+            <option value="Short Hair ">Short</option>
           </select>
 
           <label> Eye color: </label>
           <select type="text" name="eyeColor" onChange={(e) => handleChange(e)}>
-            <option value="blue">blue</option>
-            <option value="green">green</option>
-            <option value="hazel">hazel</option>
-            <option value="brown">brown</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Hazel">Hazel</option>
+            <option value="Brown">Brown</option>
           </select>
 
           <label> Skin color: </label>
@@ -183,18 +183,18 @@ function CharacterGenerator() {
             name="skinColor"
             onChange={(e) => handleChange(e)}
           >
-            <option value="fair">fair</option>
-            <option value="olive">olive</option>
-            <option value="red">red</option>
-            <option value="dark">dark</option>
+            <option value="Fair">Fair</option>
+            <option value="Olive">Olive</option>
+            <option value="Red">Red</option>
+            <option value="Dark">Dark</option>
           </select>
 
           <label> Body type: </label>
           <select type="text" name="bodyType" onChange={(e) => handleChange(e)}>
-            <option value="skinny">skinny</option>
-            <option value="toned">toned</option>
-            <option value="muscled">muscled</option>
-            <option value="fat">fat</option>
+            <option value="Skinny">Skinny</option>
+            <option value="Toned">Toned</option>
+            <option value="Muscled">Muscled</option>
+            <option value="Fat">Fat</option>
           </select>
         </div>
 
@@ -421,7 +421,7 @@ function CharacterGenerator() {
           <label> Long Sword </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Long Sword"
             onChange={(e) => handleChange(e)}
           />
@@ -429,7 +429,7 @@ function CharacterGenerator() {
           <label> Sword </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Sword"
             onChange={(e) => handleChange(e)}
           />
@@ -437,7 +437,7 @@ function CharacterGenerator() {
           <label> Great Axe </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Great Axe"
             onChange={(e) => handleChange(e)}
           />
@@ -445,7 +445,7 @@ function CharacterGenerator() {
           <label> Mace </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Mace"
             onChange={(e) => handleChange(e)}
           />
@@ -453,7 +453,7 @@ function CharacterGenerator() {
           <label> Quarterstaff </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Quarterstaff"
             onChange={(e) => handleChange(e)}
           />
@@ -461,7 +461,7 @@ function CharacterGenerator() {
           <label> Dagger </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Dagger"
             onChange={(e) => handleChange(e)}
           />
@@ -469,7 +469,7 @@ function CharacterGenerator() {
           <label> Spear </label>
           <input
             type="radio"
-            name="Main Weapon"
+            name="mainWeapon"
             value="Spear"
             onChange={(e) => handleChange(e)}
           />
@@ -481,7 +481,7 @@ function CharacterGenerator() {
           <label> Crossbow </label>
           <input
             type="radio"
-            name="Ranged Weapon"
+            name="rangedWeapon"
             value="Crossbow"
             onChange={(e) => handleChange(e)}
           />
@@ -489,7 +489,7 @@ function CharacterGenerator() {
           <label> Shortbow </label>
           <input
             type="radio"
-            name="Ranged Weapon"
+            name="rangedWeapon"
             value="Shortbow"
             onChange={(e) => handleChange(e)}
           />
@@ -497,7 +497,7 @@ function CharacterGenerator() {
           <label> Longbow </label>
           <input
             type="radio"
-            name="Ranged Weapon"
+            name="rangedWeapon"
             value="Longbow"
             onChange={(e) => handleChange(e)}
           />
@@ -505,7 +505,7 @@ function CharacterGenerator() {
           <label> Sling </label>
           <input
             type="radio"
-            name="Ranged Weapon"
+            name="rangedWeapon"
             value="Sling"
             onChange={(e) => handleChange(e)}
           />
@@ -513,7 +513,7 @@ function CharacterGenerator() {
           <label> Darts </label>
           <input
             type="radio"
-            name="Ranged Weapon"
+            name="rangedWeapon"
             value="Dart"
             onChange={(e) => handleChange(e)}
           />
@@ -524,28 +524,28 @@ function CharacterGenerator() {
           <label> Leather Armor </label>
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Leather Armor"
             onChange={(e) => handleChange(e)}
           />
           <label> Studded Leather Armor </label>
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Studded Leather Armor"
             onChange={(e) => handleChange(e)}
           />
           <label> Chain Mail Shirt </label>
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Chain Shirt"
             onChange={(e) => handleChange(e)}
           />
           <label> Scale Mail Armor </label>
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Scale Mail"
             onChange={(e) => handleChange(e)}
           />
@@ -553,7 +553,7 @@ function CharacterGenerator() {
           <label> Ring Mail Armor </label>
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Ring Mail"
             onChange={(e) => handleChange(e)}
           />
@@ -562,7 +562,7 @@ function CharacterGenerator() {
 
           <input
             type="radio"
-            name="Armor"
+            name="armor"
             value="Plate"
             onChange={(e) => handleChange(e)}
           />
@@ -638,7 +638,10 @@ function CharacterGenerator() {
           <input type="checkbox" name="performance" onChange={handleCheck} />
         </div>
         <br />
-        <button type="submit"> Create character! </button>
+        <button className="submitButton" type="submit">
+          {" "}
+          Create character!{" "}
+        </button>
       </form>
     </div>
   );

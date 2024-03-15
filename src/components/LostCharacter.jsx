@@ -3,7 +3,7 @@ import '../styles/LostCharacter.css'
 function LostCharacter() {
 
   return (
-    <div>
+    <div className='pageHeader'>
       <h3 className="subHeaderText"> Seems that character has not been created yet.</h3>
       <img
         width={"100%"}

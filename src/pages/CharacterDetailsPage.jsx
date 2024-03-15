@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { GeneratorContext } from "../context/generator.context";
 import LostCharacter from "../components/LostCharacter";
 import FullDetailsCard from "../components/FullDetailsCard";
+import '../styles/CharacterDetails.css'
 
 function CharacterDetailsPage() {
   const { charactersData } = useContext(GeneratorContext);
@@ -12,11 +13,11 @@ function CharacterDetailsPage() {
   );
 
   return (
-    <div>
-      <h1 className="pageHeader"> Character Details </h1>
+    <div className="characterDetailsBackground">
+      <h1 className="characterDetailsHeader"> Character Details </h1>
       {!character && <LostCharacter />}
       {character && <FullDetailsCard character={character} />}
-      <Link to={`/edit/${characterId}`}> Edit character</Link>
+      <Link className="link" to={`/edit/${characterId}`}> Edit character</Link>
     </div>
   );
 }

@@ -68,7 +68,7 @@ function FullDetailsCard({ character }) {
         <p> Armor worn: {character.armor} </p>
       </div>
     </div>
-    <button onClick={() => toPDF()}>Download PDF</button>
+    <button className='pdf' onClick={() => toPDF()}>Download PDF</button>
     </div>
   );
 }

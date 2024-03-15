@@ -1,174 +1,214 @@
-
-/*  Add character form */
-.addCharacter {
-    width: 100%;
-    text-align: center;
-    font-family: "whisper", cursive;
-    font-size: 20pt;
-    margin: 0;
-    background-image: url('https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/paper.png?raw=true');
-  }
-
-  .strContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .strContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .strContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .strContainer label {
-    display: flex;
-    align-items: center;
-  }
-  
-  .conContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .conContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .conContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .conContainer label {
-    display: flex;
-    align-items: center;
-  }
-
-  .dexContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .dexContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .dexContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .dexContainer label {
-    display: flex;
-    align-items: center;
-  }
-  .intContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .intContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .intContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .wisContainer label {
-    display: flex;
-    align-items: center;
-  }
- 
-  .wisContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .wisContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .wisContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .wisContainer label {
-    display: flex;
-    align-items: center;
-  }
- 
-  .chaContainer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .chaContainer label:first-of-type {
-    grid-column: 1 / -1;
-  }
-  
-  .chaContainer input[type="radio"] {
-    margin-right: 5px;
-    transform: scale(1.5);
-  }
-  
-  .chaContainer label {
-    display: flex;
-    align-items: center;
-  }
-
-  .addCharacterHeader{
-    text-align: center;
-    font-size: 26pt;
-    width: 100%;
-    font-family: "Cinzel Decorative", serif;
-    color: rgb(220, 205, 191);
-    background-color: rgba(0, 0, 0, 0.712);
-    margin: 0;
-  }
-
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+.editCharacter {
+  width: 100%;
+  text-align: center;
+  font-family: "whisper", cursive;
+  font-size: 20pt;
+  margin: 0;
+  background-image: url("https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/edit%20paper.png?raw=true");
+  background-size: cover;
 }
 
-  .addCharacter label {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .addCharacter input,
-  select,
-  option {
-    display: inline-block;
-    font-family: "whisper";
-    background-color: rgba(255, 255, 255, 0.45);
-    font-size: 16pt;
-  }
-  
+.editCharacterHeader {
+  text-align: center;
+  font-size: 26pt;
+  width: 100%;
+  font-family: "Cinzel Decorative", serif;
+  color: rgb(220,205,191);
+  background-color: rgba(0, 0, 0, 0.432);
+  margin: 0;
+}
 
-  @media only screen and (max-width: 390px) {
-    .row {
-      flex-direction: column;
-      align-items: center;
-    }
+.editCharacter label {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.editCharacter input,
+select,
+option {
+  display: inline-block;
+  font-family: "whisper";
+  background-color: rgba(255, 255, 255, 0.45);
+  font-size: 16pt;
+}
+
+.addCharacter {
+  width: 100%;
+  text-align: center;
+  font-family: "whisper", cursive;
+  font-size: 20pt;
+  margin: 0;
+  background-image: url("https://github.com/lerodriguezreyes/dnd-character-generator/blob/main/src/assets/paper.png?raw=true");
+}
+
+.strContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.strContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.strContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.strContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.conContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.conContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.conContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.conContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.dexContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.dexContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.dexContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.dexContainer label {
+  display: flex;
+  align-items: center;
+}
+.intContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.intContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.intContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.wisContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.wisContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.wisContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.wisContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.wisContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.chaContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.chaContainer label:first-of-type {
+  grid-column: 1 / -1;
+}
+
+.chaContainer input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.chaContainer label {
+  display: flex;
+  align-items: center;
+}
+
+.addCharacterHeader {
+  text-align: center;
+  font-size: 26pt;
+  width: 100%;
+  font-family: "Cinzel Decorative", serif;
+  color: rgb(220,205,191);
+  background-color: rgba(0, 0, 0, 0.432);
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.addCharacter label {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.addCharacter input,
+select,
+option {
+  display: inline-block;
+  font-family: "whisper";
+  background-color: rgba(255, 255, 255, 0.45);
+  font-size: 16pt;
+}
+
+.submitButton {
+  background-color: rgba(0, 0, 0, 0.144);
+  color: white;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 14pt;
+}
+
+@media only screen and (max-width: 390px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
