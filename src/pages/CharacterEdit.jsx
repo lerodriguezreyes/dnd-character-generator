@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { GeneratorContext } from "../context/generator.context";
 import LostCharacter from "../components/LostCharacter";
 import axios from "axios";
-
+import '../styles/EditPage.css'
 
 function CharacterEdit() {
   const [editCharacter, setEditCharacter] = useState(null);
@@ -64,7 +64,7 @@ function CharacterEdit() {
 
   return (
     <>
-      <h2>Edit Character</h2>
+      <h2 className="editPageHeader">Edit Character</h2>
       {!editCharacter && <LostCharacter />}
       {editCharacter && (
         <div>

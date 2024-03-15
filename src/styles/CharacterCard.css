@@ -12,10 +12,11 @@
 }
 
 .characterCardHeader {
-  background-color: rgba(128, 128, 128, 0.836);
+  background-color: rgb(220, 205, 191);
   width: 100%;
   text-align: center;
   font-size: 26pt;
+  margin: 0;
 }
 
 .profile {
@@ -24,10 +25,13 @@
   height: 225px;
   width: 225px;
   border-radius: 50%;
+  margin: 25px 25px;
+  opacity: 0.9;
+  
 }
 
 .bookText{
-  background-color: rgba(128, 128, 128, 0.836);
+  background-color: rgb(220, 205, 191);
   color: black;
   font-size: 22pt;
   width: 100%;
