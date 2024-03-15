@@ -12,8 +12,10 @@ function FullDetailsCard({ character }) {
   return ( 
     <div key={character.id} className="characterSheet">
      <div ref={targetRef}>
+      <div className='row'>
       <p>Name: {character.name} </p>
       <p>Current Campaign: {character.campaign} </p>
+      </div>
       <p>Race: {character.race}</p>
       <p>Sex: {character.sex}</p>
       <p>Class: {character.job} </p>

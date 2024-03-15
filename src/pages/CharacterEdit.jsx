@@ -57,12 +57,16 @@ function CharacterEdit() {
   };
 
   useEffect(() => {
-    let foundCharacter = charactersData.find((character, i) => {
-      setThisIndex(i);
-      return character.id === foundId;
-    });
-    console.log("This is the found character to be edited ==>", foundCharacter);
-    setEditCharacter(foundCharacter);
+
+    if (charactersData.length > 0) {
+
+      let foundCharacter = charactersData.find((character, i) => {
+        setThisIndex(i);
+        return character.id == foundId;
+      });
+      console.log("This is the found character to be edited ==>", foundCharacter);
+      setEditCharacter(foundCharacter);
+    }
   }, [charactersData]);
 
   return (
