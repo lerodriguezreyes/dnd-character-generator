@@ -14,7 +14,7 @@ function CharacterCard({ character }) {
       <h3 className="characterCardHeader"><Link to={`/detail/${character.id}`}>{character.name}'s Tale </Link></h3>
       <img className="profile" src={character.image} />
       <p className="bookText">Class: {character.job} </p>
-      <p className="bookText">Current Campaign: {character.campaign} </p>
+      <p className="bookText">Campaign: {character.campaign} </p>
       <button onClick={() => deleteCharacter(character.id)}>Put back in the shelf </button>
     </div>
     </div>
