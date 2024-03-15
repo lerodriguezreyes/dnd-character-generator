@@ -6,14 +6,14 @@ function Navbar() {
       <p id="pageTitle">Nexus Lorekeeper</p>
       <p id="pageSubTitle">Adventure Chronicler</p>
       <div id="navLinks">
-        <Link to="/" className="spread">
+        <Link to="/">
           Home
         </Link>
-        <Link to="/character" className="spread">
+        <Link to="/character">
           {" "}
           Existing Characters
         </Link>
-        <Link to="/generator" className="spread">
+        <Link to="/generator">
           New Character
         </Link>
       </div>
